@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "../globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import Header from "@/components/Header";
+import { SanityLive } from "@/sanity/lib/live";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -28,16 +29,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ClerkProvider dynamic>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      ><main>
-        <Header/>
-        {children}
-      </main>
-        
-      </body>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100 min-h-screen`}
+        >
+          <Header />
+          <main className="pt-16 px-4 md:px-8 lg:px-16">{children}</main>
+          <SanityLive />
+        </body>
       </ClerkProvider>
-     
     </html>
   );
 }

@@ -1,11 +1,22 @@
 import { Button } from '@/components/ui/button'
+import { getAllProducts } from '@/sanity/lib/products/getAllProducts';
+import ProductsView from "@/components/ProductsView"
 import React from 'react'
+import { getAllCategories } from '@/sanity/lib/products/getAllCategories';
+import BlackFridayBanner from '@/components/BlackFridayBanner';
 
-const Home = () => {
+const Home = async() => {
+  const products = await getAllProducts();
+  const categories = await getAllCategories();
+  
+
+ 
   return (
     <div>
-      <h1>Hello World! Still working!</h1>
-      <Button>Click Me</Button>
+    <BlackFridayBanner/>
+    <div> 
+      <ProductsView products={products} categories = {categories}/>
+    </div>
     </div>
   )
 }
