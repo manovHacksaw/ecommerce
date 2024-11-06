@@ -15,7 +15,7 @@ export const getActiveSalesByCouponCode = async (couponCode: CouponCodes) => {
 
 
 
-    // Return data directly if response is available
+   
     return response?.data || null;
   } catch (error) {
     console.error("Error fetching active sale by coupon code:", error);

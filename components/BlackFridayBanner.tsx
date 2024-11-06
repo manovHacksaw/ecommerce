@@ -3,7 +3,7 @@ import React from 'react';
 
 async function BlackFridayBanner() {
   const sale = await getActiveSalesByCouponCode('BFRIDAY'); // Fetching the sale data
-  console.log(sale); 
+  
 
   // Return null if there is no sale
   if (!sale) {

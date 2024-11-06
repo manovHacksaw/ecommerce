@@ -9,6 +9,8 @@ export const getAllCategories = async () => {
         query: ALL_CATEGORIES_QUERY
     })
 
+    
+
     return categories.data || []
   } catch (error) {
     console.log("Error Fetching Categories: ", error);

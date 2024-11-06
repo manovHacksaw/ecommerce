@@ -7,6 +7,7 @@ import BlackFridayBanner from '@/components/BlackFridayBanner';
 
 const Home = async() => {
   const products = await getAllProducts();
+  console.log(products)
   const categories = await getAllCategories();
   
 

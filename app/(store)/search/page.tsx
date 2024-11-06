@@ -4,9 +4,9 @@ import { getProductsByName } from "@/sanity/lib/products/getProductsByName";
 async function SearchPage({ searchParams }: { searchParams: { query: string } }) {
   const query = searchParams.query || ""; // Get the query from searchParams
 
-  // If the query is empty, just return without rendering anything
+  
   if (!query) {
-    return null; // or you can use return <></>; for an empty fragment
+    return null; 
   }
 
   // Fetch products only if the query is not empty
