@@ -4,6 +4,9 @@ import Image from "next/image";
 import React from "react";
 import AddToBasketButton from "@/components/AddToBasketButton";
 
+export const dynamic = "force-static";
+export const revalidate = 120
+
 
 async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

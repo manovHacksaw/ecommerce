@@ -22,7 +22,7 @@ function ProductCard({ product }) {
             alt={name}
             height={192}
             width={150}
-            className="object-cover"
+            className="object-contain h-full w-full"
           />
         )}
       </div>
